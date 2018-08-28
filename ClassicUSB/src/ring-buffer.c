@@ -5,8 +5,9 @@
  *      Author: technix
  */
 
-#include "ring-buffer.h"
+#include <ring-buffer.h>
 #include <stdlib.h>
+#include <string.h>
 
 ring_buffer_t ring_buffer_init(size_t length)
 {
@@ -21,7 +22,6 @@ ring_buffer_t ring_buffer_init(size_t length)
 		return NULL;
 	}
 
-	buffer->magic = RING_BUFFER_DYNAMIC_MAGIC;
 	buffer->length = length;
 	buffer->head = 0;
 	buffer->tail = 0;
@@ -32,9 +32,6 @@ ring_buffer_t ring_buffer_init(size_t length)
 void ring_buffer_dealloc(ring_buffer_t buffer)
 {
 	if (!buffer)
-		return;
-
-	if (buffer->magic != RING_BUFFER_DYNAMIC_MAGIC)
 		return;
 
 	free(buffer->buffer);
@@ -78,6 +75,15 @@ int ring_buffer_peekchar(ring_buffer_t buffer)
 	char ch = buffer->buffer[buffer->tail];
 
 	return ch;
+}
+
+int ring_buffer_drain(ring_buffer_t buffer)
+{
+	memset(buffer->buffer, 0, buffer->length);
+	buffer->head = 0;
+	buffer->tail = 0;
+
+	return 0;
 }
 
 int ring_buffer_getlength(ring_buffer_t buffer)
