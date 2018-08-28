@@ -1,0 +1,9 @@
+[submodule "ClassicUSB/platform"]
+	path = ClassicUSB/platform
+	url = git@github.com:SushiBits/platform-stm32f0.git
+[submodule "ClassicUSB/cmsis"]
+	path = ClassicUSB/cmsis
+	url = git@github.com:SushiBits/cmsis.git
+[submodule "ClassicUSB/libusb_stm32"]
+	path = ClassicUSB/libusb_stm32
+	url = git@github.com:dmitrystu/libusb_stm32.git
