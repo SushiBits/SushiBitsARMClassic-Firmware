@@ -85,7 +85,11 @@
                             							
                             <option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn.2079469956" name="Enable all common warnings (-Wall)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn" useByScannerDiscovery="true" value="true" valueType="boolean"/>
                             							
-                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.id.1531254198" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.id" value="1287942917" valueType="string"/>
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.id.1531254198" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.id" useByScannerDiscovery="false" value="1287942917" valueType="string"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.architecture.583901858" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.architecture" useByScannerDiscovery="false" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.arch.armv6-m" valueType="enumerated"/>
+                            							
+                            <option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness.190151658" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness.little" valueType="enumerated"/>
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform.57267995" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
                             							
@@ -175,6 +179,8 @@
                                     								
                                 </option>
                                 								
+                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.usenewlibnano.1721436340" name="Use newlib-nano (--specs=nano.specs)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.usenewlibnano" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+                                								
                                 <inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input.861071884" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input">
                                     									
                                     <additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -221,7 +227,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding="libusb_stm32/demo" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="libusb_stm32/src/usbd_stm32l476_otgfs.c|libusb_stm32/src/usbd_stm32l100_devfs.c|libusb_stm32/src/usbd_stm32l100_devfs_asm.S|libusb_stm32/src/usbd_stm32l052_devfs_asm.S|libusb_stm32/src/usbd_stm32f429_otgfs.c|libusb_stm32/src/usbd_stm32f103_devfs.c|libusb_stm32/src/usbd_stm32f103_devfs_asm.S|libusb_stm32/demo" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
@@ -230,6 +236,8 @@
             </storageModule>
             			
             <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            			
+            <storageModule moduleId="ilg.gnumcueclipse.managedbuild.packs"/>
             		
         </cconfiguration>
         	
